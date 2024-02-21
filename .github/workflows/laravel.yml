@@ -1,0 +1,34 @@
+name: Laravel CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: bu shunchaki test
+        run: echo "Test uchun"
+
+      - name: Kodni GitHub repositorydan olib kelish
+        uses: actions/checkout@v2
+
+      - name: PHP ning ma'lumotlarini sozlash (8.1 versiyasi)
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+
+      - name: Serverga deploy qilish
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd /var/www/project1/
+            git pull origin main
+            git status
