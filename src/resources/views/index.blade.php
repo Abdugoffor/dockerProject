@@ -8,7 +8,8 @@
     <title>Document</title>
 </head>
 
-<body>
+<body bgcolor="grey">
+    <a href="{{ route('project') }}">Project</a> <br>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">
