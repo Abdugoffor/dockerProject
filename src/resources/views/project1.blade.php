@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>asdas</h1>
+    <a href="{{ route('cate') }}">Category</a>
+    <h1>About saxifa</h1>
 </body>
 </html>
