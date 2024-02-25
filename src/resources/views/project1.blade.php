@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body bgcolor="grey">
-    <a href="{{ route('cate') }}">Category list</a>
+    <a href="{{ route('cate') }}">Category list test uchun CI/CD</a>
     <h1>About saxifa</h1>
 </body>
 </html>
