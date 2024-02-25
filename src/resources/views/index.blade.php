@@ -9,7 +9,8 @@
 </head>
 
 <body bgcolor="grey">
-    <a href="{{ route('project') }}">Project view test</a> <br>
+    <a href="{{ route('project') }}">Project view test</a> <br> <br><br>
+    <hr>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">
