@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
+<body bgcolor="grey">
     <a href="{{ route('cate') }}">Category list</a>
     <h1>About saxifa</h1>
 </body>
