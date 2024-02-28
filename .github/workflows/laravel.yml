@@ -10,14 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Bu test uchun 
+      - name: Bu test uchun
         run: echo "Test uchun"
-        
-      - name: Composer install va Cache ni tozalash
+
+      - name: Cache ni tozalash
         run: |
           cd src
-          composer update
-          composer install
           php artisan config:clear
           php artisan cache:clear
           php artisan optimize
