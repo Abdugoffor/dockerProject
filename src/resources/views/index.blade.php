@@ -21,6 +21,7 @@
     <h1>test1</h1>
     <h1>test 2</h1>
     <h1>test migrate 2</h1>
+    <h1>test migrate 3</h1>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">

@@ -13,17 +13,17 @@ jobs:
       - name: Bu test uchun
         run: echo "Test uchun"
 
-      - name: Laravel Test qilish
-        run: php artisan migrate
+      - name: Laravel migrate
+        run: docker compose exec php php artisan migrate
 
       - name: Cache ni tozalash
-        run: php artisan optimize
+        run: docker compose exec php php artisan optimize
 
       - name: View ni tozalash
-        run: php artisan view:clear
+        run: docker compose exec php php artisan view:clear
 
       - name: Laravel Test qilish
-        run: php artisan test
+        run: docker compose exec php php artisan test
 
       - name: Kodni GitHub repositorydan olib kelish
         uses: actions/checkout@v2
