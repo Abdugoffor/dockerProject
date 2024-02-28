@@ -11,7 +11,6 @@
 
 <body bgcolor="grey">
     <h1>Categorya create</h1>
-    <h1>Categorya create 2</h1>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">
