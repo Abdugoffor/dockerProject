@@ -21,17 +21,12 @@ jobs:
         with:
           php-version: "8.1"
 
-      - name: Migratsiya
-        run: docker-compose exec app php artisan migrate
-
-
-
-
-      - name: Optimize Laravel
-        run: php artisan optimize
-
-      - name: Laravel Test qilish
-        run: php artisan test
+      - name: Migratsiya, Optimize, Test qilish
+        run: |
+          cd src 
+          php artisan migrate
+          php artisan optimize
+          php artisan test
 
       - name: Serverga deploy qilish
         uses: appleboy/ssh-action@master
