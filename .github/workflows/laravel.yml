@@ -23,7 +23,7 @@ jobs:
 
       - name: Migratsiya
         run: |
-          cd /var/www/project1/src
+          cd /var/www/project1/
           ls # Tekshirish maqsadida
           php artisan migrate
 
