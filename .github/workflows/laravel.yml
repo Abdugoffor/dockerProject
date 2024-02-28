@@ -21,6 +21,12 @@ jobs:
         with:
           php-version: "8.1"
 
+          script: |
+            cd /var/www/project1/src 
+            php artisan migrate
+            php artisan optimize
+            php artisan test
+
       - name: Serverga deploy qilish
         uses: appleboy/ssh-action@master
         with:
