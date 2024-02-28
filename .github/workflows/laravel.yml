@@ -13,12 +13,14 @@ jobs:
       - name: Bu test uchun
         run: echo "Test uchun"
 
+      - name: Laravel Test qilish
+        run: php artisan migrate
+
       - name: Cache ni tozalash
-        run: |
-          php artisan config:clear
-          php artisan cache:clear
-          php artisan optimize
-          php artisan view:clear
+        run: php artisan optimize
+
+      - name: View ni tozalash
+        run: php artisan view:clear
 
       - name: Laravel Test qilish
         run: php artisan test
