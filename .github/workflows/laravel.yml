@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: bu shunchaki test
+      - name: Bu test uchun 
         run: echo "Test uchun"
+
+      - name: Projectni test qilish 
+        run: php artisan test
 
       - name: Kodni GitHub repositorydan olib kelish
         uses: actions/checkout@v2
