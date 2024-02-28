@@ -20,6 +20,11 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.1"
+      
+      - name: Composer install
+        run: |
+          cd src
+          composer install
 
       - name: Migratsiya, Optimize, Test qilish
         run: |
