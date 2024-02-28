@@ -9,7 +9,7 @@
 </head>
 
 <body bgcolor="grey">
-    <h1>+ Composer install 123</h1>
+    <h1>+ Composer install 123 s</h1>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">
