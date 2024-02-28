@@ -16,22 +16,10 @@ jobs:
       - name: Kodni GitHub repositorydan olib kelish
         uses: actions/checkout@v2
 
-      - name: PHP ning ma'lumotlarini sozlash (8.1 versiyasi)
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: "8.1"
-      
-      - name: Composer install
-        run: |
-          cd src
-          composer install
-
-      - name: Migratsiya, Optimize, Test qilish
-        run: |
-          cd src 
-          php artisan migrate
-          php artisan optimize
-          php artisan test
+      # - name: PHP ning ma'lumotlarini sozlash (8.1 versiyasi)
+      #   uses: shivammathur/setup-php@v2
+      #   with:
+      #     php-version: "8.1"
 
       - name: Serverga deploy qilish
         uses: appleboy/ssh-action@master
