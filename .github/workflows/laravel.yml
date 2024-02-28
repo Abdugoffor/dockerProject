@@ -22,7 +22,8 @@ jobs:
           php-version: "8.1"
 
       - name: Migratsiya
-        run: docker compose exec php php artisan migrate
+        run: docker-compose exec app php artisan migrate
+
 
 
 
