@@ -23,8 +23,10 @@ jobs:
 
       - name: Migratsiya
         run: |
-          cd /var/www/project1/
+          cd /var/www/project1/src
+          ls # Tekshirish maqsadida
           php artisan migrate
+
 
 
       - name: Optimize Laravel
