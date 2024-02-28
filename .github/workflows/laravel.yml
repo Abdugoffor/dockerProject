@@ -15,7 +15,6 @@ jobs:
 
       - name: Cache ni tozalash
         run: |
-          cd src
           php artisan config:clear
           php artisan cache:clear
           php artisan optimize
