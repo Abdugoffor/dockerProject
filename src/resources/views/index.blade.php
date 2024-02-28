@@ -10,6 +10,7 @@
 
 <body bgcolor="grey">
     <h1>+ Composer install 123 bu composer ham qo'shildi</h1>
+    <h2>test uchun</h2>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">
