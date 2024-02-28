@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .sayt {
+            width: 300px;
+            min-height: 50vh;
+            border: 1px solid green;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body bgcolor="grey">
@@ -16,9 +24,11 @@
         <input type="text" name="name" placeholder="Name">
         <input type="submit" name="ok">
     </form>
-    @foreach ($models as $model)
-        <li>{{ $model->id }} , {{ $model->name }}</li>
-    @endforeach
+    <div class="sayt">
+        @foreach ($models as $model)
+            <li>{{ $model->id }} , {{ $model->name }}</li>
+        @endforeach
+    </div>
 </body>
 
 </html>

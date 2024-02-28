@@ -17,7 +17,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Composerni install qilish
-        uses: docker compose run composer install
+        run: docker run --rm -v $(pwd):/app composer install
+
 
       # - name: PHP ning ma'lumotlarini sozlash (8.1 versiyasi)
       #   uses: shivammathur/setup-php@v2
