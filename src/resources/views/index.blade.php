@@ -10,7 +10,6 @@
 </head>
 
 <body bgcolor="grey">
-    <h1>Categorya create</h1>
     <h2>Laravel CI-CD</h2>
     <form action="{{ route('store') }}" method="post">
         @csrf
