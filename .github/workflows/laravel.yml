@@ -13,25 +13,22 @@ jobs:
       - name: Bu test uchun
         run: echo "Test uchun"
 
-      - name: Laravel migrate
-        run: docker compose exec php php artisan migrate
-
-      - name: Cache ni tozalash
-        run: docker compose exec php php artisan optimize
-
-      - name: View ni tozalash
-        run: docker compose exec php php artisan view:clear
-
-      - name: Laravel Test qilish
-        run: docker compose exec php php artisan test
-
       - name: Kodni GitHub repositorydan olib kelish
         uses: actions/checkout@v2
 
-      # - name: PHP ning ma'lumotlarini sozlash (8.1 versiyasi)
-      #   uses: shivammathur/setup-php@v2
-      #   with:
-      #     php-version: "8.1"
+      - name: PHP ning ma'lumotlarini sozlash (8.1 versiyasi)
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+
+      - name: Migratsiya
+        run: php artisan migrate
+
+      - name: Optimize Laravel
+        run: php artisan optimize
+
+      - name: Laravel Test qilish
+        run: php artisan test
 
       - name: Serverga deploy qilish
         uses: appleboy/ssh-action@master
