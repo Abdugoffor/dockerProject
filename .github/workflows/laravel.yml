@@ -22,9 +22,10 @@ jobs:
           php-version: "8.1"
 
       - name: Migratsiya
-        run:  |
-          cd /var/www/project1/src/ 
+        run: |
+          cd /var/www/project1/
           php artisan migrate
+
 
       - name: Optimize Laravel
         run: php artisan optimize
