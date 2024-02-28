@@ -22,10 +22,7 @@ jobs:
           php-version: "8.1"
 
       - name: Migratsiya
-        run: |
-          cd /var/www/project1/
-          ls # Tekshirish maqsadida
-          php artisan migrate
+        run: docker compose exec php php artisan migrate
 
 
 
