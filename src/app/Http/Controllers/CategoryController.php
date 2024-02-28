@@ -20,8 +20,4 @@ class CategoryController extends Controller
         return back();
     }
     
-    public function project()
-    {
-        return view('project1');
-    }
 }
