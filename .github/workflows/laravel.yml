@@ -12,13 +12,22 @@ jobs:
     steps:
       - name: Bu test uchun 
         run: echo "Test uchun"
+        
+      - name: Composer install va Cache ni tozalash
+        run: |
+          cd src
+          composer update
+          composer install
+          php artisan config:clear
+          php artisan cache:clear
+          php artisan optimize
+          php artisan view:clear
+
+      - name: Laravel Test qilish
+        run: php artisan test
 
       - name: Kodni GitHub repositorydan olib kelish
         uses: actions/checkout@v2
-
-      - name: Composerni install qilish
-        run: docker run --rm -v $(pwd):/app composer install
-
 
       # - name: PHP ning ma'lumotlarini sozlash (8.1 versiyasi)
       #   uses: shivammathur/setup-php@v2

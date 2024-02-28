@@ -10,15 +10,14 @@
         .sayt {
             width: 300px;
             min-height: 50vh;
-            border: 1px solid green;
+            border: 3px solid rgb(20, 49, 179);
             border-radius: 10px;
         }
     </style>
 </head>
 
 <body bgcolor="grey">
-    <h1>+ Composer install 123 bu composer ham qo'shildi</h1>
-    <h2>test uchun</h2>
+    <h1>Css style</h1>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">
