@@ -9,7 +9,7 @@
 </head>
 
 <body bgcolor="grey">
-    <h1>New text</h1>
+    <h1>New text update text</h1>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">
