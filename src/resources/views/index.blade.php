@@ -10,8 +10,8 @@
 </head>
 
 <body bgcolor="grey">
-    <h2>Laravel CI-CD route store</h2>
-    <form action="{{ route('store') }}" method="post">
+    <h2>Laravel CI-CD Cate</h2>
+    <form action="/cate" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">
         <input type="submit" name="ok">
