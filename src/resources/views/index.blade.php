@@ -11,7 +11,7 @@
 
 <body bgcolor="grey">
     <h2>Laravel CI-CD</h2>
-    <form action="{{ route('store') }}" method="get">
+    <form action="/cate" method="post">
         @csrf
         <input type="text" name="name" placeholder="Name">
         <input type="submit" name="ok">

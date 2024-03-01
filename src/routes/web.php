@@ -19,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[CategoryController::class, 'index'])->name('cate');
-Route::get('/cate',[CategoryController::class, 'store'])->name('store');
+Route::post('/cate',[CategoryController::class, 'store'])->name('store');
